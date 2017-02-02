@@ -1,0 +1,93 @@
+body {
+}
+
+.exploremap .inspector{
+  left: 20px;
+  top: 150px;
+  right: auto;
+}
+            .exploremap .inspector .parent span,
+            .exploremap .inspector .flyout {
+              right: auto;
+              left: 40px;
+            }
+
+            .exploremap .toolbar {
+              top: 20px;
+              bottom: auto;
+              right: 20px;
+              left: auto;
+            }
+            .exploremap .toolbar .flyout {
+              left: auto;
+              right: 0;
+              top: 51px;
+              bottom: auto;
+            }
+            .exploremap .toolbar .active .flyout {
+              background: rgba(255,255,255,0.8);
+            }
+            .exploremap .toolbar .btn-close{
+              display: none;
+            }
+            .exploremap .toolbar .flyout .content,
+            .exploremap .toolbar .flyout .header{
+              background: none;
+            }
+
+            .exploremap .toolbar #toolbar-layer .parent{
+              border-radius: 0 10px 10px 0;
+            }
+            .exploremap .toolbar #toolbar-peta-dasar .parent{
+              border-radius: 10px 0 0 10px;
+            }
+            .exploremap .toolbar #toolbar-layer.active .parent {
+              border-radius: 0 10px 0 0 ;
+            }
+            .exploremap .toolbar #toolbar-peta-dasar.active .parent {
+              border-radius: 10px 0 0 0 ;
+            }
+            .exploremap .toolbar .flyout {
+              border-radius: 0 0 20px 20px;
+            }
+
+            .exploremap .controller ul li:first-child a ,
+            .exploremap .inspector ul li:first-child a {
+              border-radius: 3px 3px 0 0;
+            }
+            .exploremap .controller ul li:first-child a:hover ,
+            .exploremap .inspector ul li:first-child a:hover ,
+            .exploremap .inspector ul li:first-child.active a {
+              border-radius: 3px 0 0 0;
+            }
+            .exploremap .controller ul li:last-child a ,
+            .exploremap .inspector ul li:last-child a {
+              border-radius: 0 0 3px 3px;
+            }
+            .exploremap .controller ul li:last-child a:hover ,
+            .exploremap .inspector ul li:last-child a:hover ,
+            .exploremap .inspector ul li:last-child.active a {
+              border-radius: 0 0 0 3px;
+            }
+            .exploremap .controller ul li:first-child:last-child a ,
+            .exploremap .inspector ul li:first-child:last-child a {
+              border-radius: 3px;
+            }
+            .exploremap .controller ul li:first-child:last-child a:hover ,
+            .exploremap .controller ul li:first-child:last-child a:hover ,
+            .exploremap .inspector ul li:first-child:last-child.active a {
+              border-radius: 3px 0 0 3px;
+            }
+
+            .exploremap .inspector .flyout {
+              background: none;
+            }
+            .exploremap .inspector .flyout .flyout-header {
+              height: 41px;
+              padding-top: 8px;
+              background: #fff;
+            }
+            .exploremap .inspector .flyout .flyout-content {
+              top: 41px;
+              background: rgba(255,255,255,0.8);
+            }

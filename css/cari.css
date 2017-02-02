@@ -1,0 +1,21 @@
+#mapfilter {
+    height:150px;
+    border:1px solid #ccc;
+}
+.shop-list-item .detail{
+    float:left;
+}
+
+.shop-list-item .description, .shop-list-item .price {
+    margin-bottom: 25px;
+    width: 510px;
+}
+
+.dialog {
+    display: none;
+}
+
+#map-preview {
+    height:300px;
+    width:100%;
+}

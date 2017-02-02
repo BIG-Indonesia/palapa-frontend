@@ -1,0 +1,734 @@
+
+.table-data{
+    font-size: .9em;
+}
+    .table-data th,
+    .table-data td{
+        border: 1px solid #eee;
+        padding: .3em .5em;
+    }
+
+.general-form{
+    font-size: .9em;
+    margin: 0;
+}
+.general-form p{
+    margin: 0 0 30px;
+}
+.general-form label{
+    text-transform: uppercase;
+    margin: 0 0 .5em;
+    font-size: .85em;
+    letter-spacing: .3em;
+    color: #999;
+    font-weight: 300;
+    display: block;
+}
+.general-form .input-text{
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background: transparent;
+    width: 100%;
+    padding: .5em 0;
+    font-size: 1.2em;
+    margin: 0;
+}
+    .general-form .input-text:focus{
+        border-bottom: 2px solid #f36510;
+    }
+.general-form .select-options{
+    display: inline-block;
+    min-width: 50%;
+    max-width: 100%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: .5em;
+    position: relative;
+}
+    .general-form .select-options.full{
+        width: 100%;
+    }
+    .general-form .select-options select{
+        width: 115%;
+        font-size: 1em;
+        border: none;
+        background: transparent;
+    }
+    .general-form .select-options .arrow{
+        position: absolute;
+        right: 10px;
+        top: .5em;
+        color: #444;
+        pointer-events: none;
+    }
+.general-form .checkbox-group{
+    display: block;
+    overflow: hidden;
+}
+    .general-form .checkbox-group .checkbox{
+        display: inline-block;
+        margin-right: 2em;
+    }
+    .general-form .checkbox-group .checkbox span{
+        letter-spacing: normal;
+        text-transform: capitalize;
+        font-weight: normal;
+        color: #333;
+    }
+
+.general-form .action{
+    text-align: right;
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    padding: 12px 18px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1;
+}
+    .btn:hover{
+        background: #ccc;
+        -webkit-box-shadow: 0px 4px 5px 0 rgba(0,0,0,.1);
+        box-shadow: 0px 4px 5px 0 rgba(0,0,0,.1);
+    }
+    .btn.full{
+        display: block;
+        width: 100%;
+    }
+    .btn.primary{
+        background: #4A90E2;
+        color: #fff;
+    }
+        .btn.primary:hover{
+            background: #2275d7;
+        }
+    .btn.transparent{
+        border: 1px solid #eee;
+        background: none;
+        color: #777;
+    }
+        .btn.transparent:hover{
+            color: #222;
+            border: 1px solid #ddd;
+        }
+    .btn.flat,
+    .btn.flat:hover{
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    button.btn{
+        border: none;
+    }
+
+
+
+
+.exploremap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #eee;
+    overflow: hidden;
+}
+    .exploremap .maparea{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #ddd !important;
+        overflow: hidden;
+    }
+
+    .exploremap .toolbar{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        height: 50px;
+        z-index: 777;
+    }
+        .exploremap .toolbar > ul{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            list-style-type: none;
+            position: relative;
+        }
+        .exploremap .toolbar > ul > li{
+            float: left;
+        }
+        .exploremap .toolbar .parent{
+            display: block;
+            padding: 16px 25px;
+            font-size: .9em;
+            color: #fff;
+            text-decoration: none;
+            background: #f36510;
+            border-right: 1px solid rgba(255, 255, 255, .2);
+        }
+            .exploremap .toolbar .parent:hover{
+                background: #f36510;
+            }
+            .exploremap .toolbar .active .parent{
+                background: #fff;
+                color: #f36510;
+            }
+            .exploremap .toolbar .parent.save{
+                background: #7ED321;
+            }
+                .exploremap .toolbar .parent.save:hover{
+                    background: #71C01B;
+                }
+            .exploremap .toolbar .parent.edit{
+                background: #256E91;
+            }
+                .exploremap .toolbar .parent.edit:hover{
+                    background: #145E81;
+                }
+            .exploremap .toolbar .parent.hapus{
+                background: #FF4D2E;
+            }
+                .exploremap .toolbar .parent.hapus:hover{
+                    background: #E22F10;
+                }
+        .exploremap .toolbar .flyout{
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            background: #fff;
+            width: 500px;
+            height: 410px;
+            overflow: hidden;
+            display: none;
+        }
+            .exploremap .toolbar .active .flyout{
+                display: block;
+            }
+            .exploremap .toolbar .flyout .header{
+                width: 100%;
+                height: 60px;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+                padding: 10px 40px 10px 20px;
+                background: #fff;
+            }
+            .exploremap .toolbar .flyout .content{
+                width: 100%;
+                height: 350px;
+                overflow: scroll;
+                background: #fff;
+            }
+        .exploremap .toolbar .btn-close{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            padding: 15px 15px;
+            height: 60px;
+            border-left: 1px solid #eee;
+            display: block;
+            font-size: 2em;
+            color: #aaa;
+            line-height: 1em;
+            text-align: center;
+        }
+            .exploremap .toolbar .btn-close:hover{
+                color: #f36510;
+            }
+
+
+    .exploremap .addlayer{
+        font-size: .85em;
+    }
+        .exploremap .addlayer .coach{
+            display: none;
+        }
+            .exploremap .addlayer .coach.active{
+                display: block;
+            }
+        .exploremap .addlayer .select-options{
+            font-size: 1.1em;
+            width: 260px;
+        }
+        .exploremap .addlayer .input-wrapper{
+            float: left;
+            margin-right: 5px;
+        }
+        .exploremap .addlayer .input-text{
+            width: 280px;
+        }
+
+
+
+    .exploremap .inspector{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 777;
+    }
+        .exploremap .inspector > ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            position: relative;
+        }
+            .exploremap .inspector > ul > li{
+
+            }
+        .exploremap .inspector .parent{
+            display: block;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            height: 40px;
+            background: #475577;
+            position: relative;
+        }
+            .exploremap .inspector .active .parent{
+                background: #fff;
+                color: #475577;
+            }
+            .exploremap .inspector .parent i{
+                font-size: 1.4em;
+                text-align: center;
+                display: block;
+                width: 40px;
+                height: 40px;
+                padding: 10px 0 0;
+            }
+            .exploremap .inspector .parent span{
+                display: none;
+                position: absolute;
+                right: 40px;
+                top: 0;
+                height: 40px;
+                padding: 10px 1em;
+                background: #475577;
+                font-size: .8em;
+                z-index: 777;
+                white-space: nowrap;
+            }
+                .exploremap .inspector .parent:hover span{
+                    display: block;
+                }
+                .exploremap .inspector .active .parent:hover span{
+                    z-index: 555;
+                }
+        .exploremap .inspector .flyout{
+            position: absolute;
+            top: 0;
+            right: 40px;
+            width: 280px;
+            height: 450px;
+            min-height: 150px;
+            background: #fff;
+            z-index: 666;
+            font-size: .85em;
+            display: none;
+            border-right: 1px solid #eee;
+        }
+            .exploremap .inspector .active .flyout{
+                display: block;
+            }
+            .exploremap .inspector .flyout .flyout-header{
+                height: 50px;
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+            }
+                .exploremap .inspector .flyout .flyout-header h3{
+                    text-transform: uppercase;
+                    margin: 0;
+                    font-size: .9em;
+                    letter-spacing: .3em;
+                    color: #999;
+                    font-weight: 300;
+                }
+            .exploremap .inspector .flyout .flyout-content{
+                position: absolute;
+                top: 50px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                overflow: scroll;
+                padding: 15px;
+            }
+
+
+    .exploremap .controller{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 777;
+    }
+        .exploremap .controller > ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            position: relative;
+        }
+            .exploremap .controller > ul > li{
+
+            }
+        .exploremap .controller .parent{
+            display: block;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            height: 40px;
+            width: 40px;
+            background: #475577;
+            position: relative;
+        }
+            .exploremap .controller .active .parent{
+                background: #fff;
+                color: #475577;
+            }
+            .exploremap .controller .parent i{
+                font-size: 1.2em;
+                text-align: center;
+                display: block;
+                width: 40px;
+                height: 40px;
+                padding: 10px 0 0;
+            }
+            .exploremap .controller .parent span{
+                display: none;
+                position: absolute;
+                left: 40px;
+                top: 0;
+                height: 40px;
+                white-space: nowrap;
+                padding: 10px 1em;
+                background: #475577;
+                font-size: .8em;
+                z-index: 777;
+            }
+                .exploremap .controller .parent:hover span{
+                    display: block;
+                }
+                .exploremap .controller .active .parent:hover span{
+                    z-index: 555;
+                }
+
+
+    .exploremap .list-peta-dasar{
+        margin: 0;
+        padding: 20px;
+        list-style-type: none;
+        overflow: hidden;
+        font-size: .75em;
+    }
+        .exploremap .list-peta-dasar li{
+            float: left;
+            width: 135px;
+            margin: 0 7px 15px;
+            overflow: hidden;
+            border: 4px solid #fff;
+        }
+            .exploremap .list-peta-dasar li.selected{
+                border: 4px solid #C66;
+                background: #C66;
+                color: #fff;
+            }
+        .exploremap .list-peta-dasar a{
+            display: block;
+            text-decoration: none;
+            color: #000;
+        }
+            .exploremap .list-peta-dasar li.selected a{
+                color: #fff;
+            }
+        .exploremap .list-peta-dasar .thumbnail{
+            display: block;
+            width: 135px;
+            height: 100px;
+            overflow: hidden;
+            margin-bottom: .5em;
+        }
+
+
+    .exploremap .basic-info{
+        padding: 20px;
+    }
+        .exploremap .basic-info .input-text{
+            font-size: 12px;
+        }
+
+        .exploremap .basic-info .info-title{
+            font-size: 1.3em;
+            margin: 0 0 1em;
+        }
+        .exploremap .basic-info .info-description{
+            font-size: .8em;
+            line-height: 1.5em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .exploremap .basic-info .info-meta{
+            font-size: .8em;
+            color: #666;
+        }
+            .exploremap .basic-info .info-meta .author{
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+            .exploremap .basic-info .info-meta .stars{
+                color: #F5A623;
+                font-size: 1.3em;
+                margin-bottom: .5em;
+            }
+            .exploremap .basic-info .info-meta .view{}
+
+    .basic-info-form .basic-info-display,
+    .basic-info-form-active .basic-info-edit{
+        display: block;
+    }
+    .basic-info-form-active .basic-info-display,
+    .basic-info-form .basic-info-edit{
+        display: none;
+    }
+
+    .exploremap .list-layer{
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-size: .85em
+    }
+        .exploremap .list-layer.active{
+            display: block;
+        }
+    .exploremap .list-layer li{
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+    }
+    .exploremap .list-layer .title{
+        display: block;
+        float: left;
+        width: 70%;
+        padding: 10px 20px;
+        color: #111;
+        text-decoration: none;
+        overflow: hidden;
+    }
+        /*.exploremap #available-layer.list-layer .title{
+            width: 100%;
+        }*/
+        .exploremap .list-layer .title .icon{
+            float: left;
+            font-size: 1.2em;
+        }
+        .exploremap .list-layer .title .name{
+            display: block;
+            margin-left: 20px;
+        }
+    .exploremap .list-layer .action{
+        display: block;
+        float: right;
+        width: 30%;
+        padding: 10px 0 10px 0;
+        text-align: right;
+        font-size: 1.4em;
+        overflow: hidden;
+
+    }
+        .exploremap .list-layer .action a{
+            float: left;
+            display: block;
+            margin: 0 2px;
+            padding: 0 10px;
+            color: #4A90E2;
+        }
+        .exploremap .list-layer .action a.btn-remove{
+            color: #D0021B;
+        }
+
+    .exploremap #available-layer .title{
+        width: 85%;
+    }
+    .exploremap #available-layer .title .name{
+        margin-left: 0;
+    }
+    .exploremap #available-layer .action{
+        width: 10%;
+    }
+
+
+    .exploremap .identification-result{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-size: .9em;
+    }
+        .exploremap .identification-result .item{
+            margin-bottom: .5em;
+        }
+        .exploremap .identification-result .header{
+            background: #eee;
+        }
+            .exploremap .identification-result .header .title{
+                padding: .6em 1em;
+                display: block;
+                text-decoration: none;
+                font-weight: bold;
+                margin: 0;
+                color: #222;
+            }
+            .exploremap .identification-result .header .title i{
+                display: none;
+                float: right;
+                font-size: 1em;
+            }
+        .exploremap .identification-result .collapse{
+            display: block;
+        }
+            .exploremap .identification-result .item.active .collapse,
+            .exploremap .identification-result .item:first-child .collapse{
+                display: block;
+            }
+
+
+    .exploremap .measure{
+
+    }
+        .exploremap .measure-result{
+            margin-top: 2em;
+        }
+            .exploremap .measure-result .value{
+                font-size: 1.5em;
+            }
+        .exploremap .measure h3{
+            margin: 0 0 .3em;
+            padding: 0;
+            font-size: 1em;
+            font-weight: 300;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+
+    .exploremap .controller{
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 50px;
+        z-index: 111;
+    }
+        .exploremap .controller ul{
+            margin: 0 0 5px;
+            padding: 0;
+            list-style-type: none;
+        }
+        .exploremap .controller .zoom{}
+
+#eksplor-peta {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#eksplor-peta #area-peta {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f36510;
+}
+#eksplor-peta #toolbar {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  z-index: 999;
+  width: 100%;
+  background: #28324E;
+}
+#eksplor-peta #toolbar .primary {
+  float: left;
+}
+#eksplor-peta #toolbar .secondary {
+  float: right;
+}
+#eksplor-peta #toolbar > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  height: 50px;
+}
+#eksplor-peta #toolbar > ul > li {
+  float: left;
+}
+#eksplor-peta #toolbar > ul > li > a {
+  display: block;
+  background: #28324E;
+  padding: 11px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: .85em;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+#eksplor-peta #toolbar > ul > li > a:hover {
+  background: #344167;
+}
+#eksplor-peta #toolbar > ul > li > a > i {
+  font-size: 1.2em;
+}
+#eksplor-peta #toolbar > ul > li > a.search {
+  background: #7ED321;
+}
+#eksplor-peta #toolbar .flyout {
+  display: none;
+  width: 581px;
+  height: 410px;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  background: #fff;
+  font-size: .85em;
+  z-index: 9999;
+}
+#eksplor-peta #toolbar .flyout .header {
+  padding: 10px 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+#eksplor-peta #toolbar .flyout .content {
+  height: 350px;
+  overflow-y: auto;
+}
+#eksplor-peta #toolbar > ul > li.active .flyout {
+  display: block;
+}
+#eksplor-peta #toolbar > ul > li.active > a {
+  background: #fff;
+  color: #28324E;
+}
+#eksplor-peta #toolbar .flyout .btn-primary {
+  display: inline-block;
+  background: #4A90E2;
+  color: #fff;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+
+#addlayer-custom-url .btn-done {
+  padding-left: 0;
+  padding-right: 0;
+  width: 80px;
+}
+
+#addlayer-custom-url .btn-add-wms {
+  padding-left: 0;
+  padding-right: 0;
+  width: 53px;
+}

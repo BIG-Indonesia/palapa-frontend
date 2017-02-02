@@ -1,0 +1,39 @@
+body {
+}
+
+.exploremap .inspector{
+  left: 20px;
+  top: 150px;
+  right: auto;
+}
+            .exploremap .inspector .parent span,
+            .exploremap .inspector .flyout {
+              right: auto;
+              left: 40px;
+            }
+
+            .exploremap .toolbar {
+              top: 20px;
+              bottom: auto;
+              right: 20px;
+              left: auto;
+            }
+            .exploremap .toolbar .flyout {
+              left: auto;
+              right: 0;
+              top: 51px;
+              bottom: auto;
+            }
+            .exploremap .toolbar .active .flyout {
+            }
+            .exploremap .toolbar .btn-close{
+              display: none;
+            }
+            .exploremap .inspector .flyout .flyout-header {
+              height: 41px;
+              padding-top: 8px;
+              background: #fff;
+            }
+            .exploremap .inspector .flyout .flyout-content {
+              top: 41px;
+            }
