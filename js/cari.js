@@ -214,7 +214,7 @@ $(document).ready(function(){
       view: new ol.View({
         projection: 'EPSG:4326',
         center: [118, -2],
-        zoom: 2
+        zoom: 5
       })
     });
 
