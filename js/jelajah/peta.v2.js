@@ -62,8 +62,8 @@ Palapa.PetaV2 = (function(){
         setupMap: function(){
             _base.append('<div id="area-peta" class="maparea"></div>');
             _defaultView = {
-                center: ol.proj.transform([118, -2], 'EPSG:4326', 'EPSG:3857'),
-                zoom: 5
+                center: ol.proj.transform([c_x, c_y], 'EPSG:4326', 'EPSG:3857'),
+                zoom: c_zoom
             };
 
             _view = new ol.View(_defaultView);
@@ -698,7 +698,7 @@ Palapa.PetaV2 = (function(){
         },
         setupDefaultLayer: function (e){
 
-            $.get("/gs/api/front_layers", function(data){
+            $.get(_api+"front_layers", function(data){
 
                 if(data.length>0){
                     $.each(data, function (index, item){

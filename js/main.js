@@ -2,13 +2,16 @@
 var _baseURL = "";
 
 // URL CSW
-var _cswURL = 'http://palapa.agrisoft-cb.com/csw'; 
+var _cswURL = 'http://REPGSMANAGERDOM/csw'; 
 
 // URL WMS
-var _wmsURL = 'http://palapa.agrisoft-cb.com:8080/geoserver/wms?';
+var _wmsURL = 'http://REPGSMANAGERDOM:8080/geoserver/wms?';
+
+// URL API
+var _api = 'http://REPGSMANAGERDOM:8000/api/';
 
 // URL PROXY if null not use Proxy
-var _proxy = 'http://palapa.agrisoft-cb.com/gs/api/proxy?url=';
+var _proxy = 'http://REPGSMANAGERDOM:8000/api/proxy?url=';
 
 
 var Palapa = Palapa || {};
