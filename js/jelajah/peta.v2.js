@@ -1053,22 +1053,22 @@ Palapa.PetaV2 = (function(){
 						url: 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 					})
 				}),
-                Bing_Aerial: new ol.layer.Tile({
-                    visible: true,
-                    preload: Infinity,
-                    source: new ol.source.BingMaps({
-                      key: 'Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3',
-                      imagerySet: 'Aerial'
-                    })
-                }),
-                Bing_AerialWithLabels: new ol.layer.Tile({
-                    visible: true,
-                    preload: Infinity,
-                    source: new ol.source.BingMaps({
-                      key: 'Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3',
-                      imagerySet: 'AerialWithLabels'
-                    })
-                }),
+                // Bing_Aerial: new ol.layer.Tile({
+                    // visible: true,
+                    // preload: Infinity,
+                    // source: new ol.source.BingMaps({
+                      // key: 'Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3',
+                      // imagerySet: 'Aerial'
+                    // })
+                // }),
+                // Bing_AerialWithLabels: new ol.layer.Tile({
+                    // visible: true,
+                    // preload: Infinity,
+                    // source: new ol.source.BingMaps({
+                      // key: 'Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3',
+                      // imagerySet: 'AerialWithLabels'
+                    // })
+                // }),
                 RBI_Indonesia: new ol.layer.Tile({
                     visible: true,
                     preload: Infinity,
@@ -1118,18 +1118,18 @@ Palapa.PetaV2 = (function(){
                 thumb : _baseURL + '/assets/img/base-bing-aerial.png',
                 layer : _baseLayers.EsriWI
             });
-            self.addBaseLayer({
-                id    : 'Bing_Aerial',
-                title : 'Bing Aerial',
-                thumb : _baseURL + '/assets/img/base-bing-aerial.png',
-                layer : _baseLayers.Bing_Aerial
-            });
-            self.addBaseLayer({
-                id    : 'Bing_AerialWithLabels',
-                title : 'Bing AerialWithLabels',
-                thumb : _baseURL + '/assets/img/base-bing-aerialwithlabel.png',
-                layer : _baseLayers.Bing_AerialWithLabels
-            });
+            // self.addBaseLayer({
+                // id    : 'Bing_Aerial',
+                // title : 'Bing Aerial',
+                // thumb : _baseURL + '/assets/img/base-bing-aerial.png',
+                // layer : _baseLayers.Bing_Aerial
+            // });
+            // self.addBaseLayer({
+                // id    : 'Bing_AerialWithLabels',
+                // title : 'Bing AerialWithLabels',
+                // thumb : _baseURL + '/assets/img/base-bing-aerialwithlabel.png',
+                // layer : _baseLayers.Bing_AerialWithLabels
+            // });
             self.addBaseLayer({
                 id    : 'RBI_Indonesia',
                 title : 'Rupabumi Indonesia',
