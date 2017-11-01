@@ -1115,7 +1115,7 @@ Palapa.PetaV2 = (function(){
             self.addBaseLayer({
                 id    : 'EsriWI',
                 title : 'ESRI World Imagery',
-                thumb : _baseURL + '/assets/img/base-bing-aerial.png',
+                thumb : _baseURL + 'image/base-bing-aerial.png',
                 layer : _baseLayers.EsriWI
             });
             // self.addBaseLayer({
