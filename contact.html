@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title id="title-kontak"></title>
+    <meta name="description" content="Geoportal Palapa Badan Informasi Geospasial">
+    <meta name="author" content="Palapa">
+    <meta name="keyword" content="geoportal, big, palapa, geoportal palapa">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontello.css">
+    <link href="assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/icheck.min_all.css">
+    <link rel="stylesheet" href="assets/css/price-range.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <link rel="stylesheet" href="assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/override.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+
+    <nav class="navbar navbar-default ">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo_big.png" alt="" id="logos"></a>
+                <span class="text_logo wow fadeInUp animated pull-left">
+                            <b><font color="#f60">G</font><font color="#666" id="organisasi-logo">EOPORTAL PALAPA</font></font></b>
+                        </span>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse yamm" id="navigation">
+                <div class="button navbar-right">
+                    <a href="login.html">
+                        <button class="navbar-btn nav-button" data-wow-delay="0.4s">Login</button>
+                    </a>
+                </div>
+                <ul class="main-nav nav navbar-nav navbar-right">
+                    <li class="dropdown ymm-sw " data-wow-delay="0.5s">
+                        <a href="index.html" data-delay="200">Home</a>
+                    </li>
+
+                    <li><a class="" href="jelajah.html">Jelajah</a></li>
+                    <li><a class="" href="pencarian.html">Pencarian</a></li>
+                    <!-- <li><a class="active" href="contact.html">Kontak</a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- End of nav bar -->
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="page-head-content">
+                    <h1 class="page-title">Contact page</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End page header -->
+
+    <!-- property area -->
+    <div class="content-area recent-property padding-top-30" style="background-color: #FFF;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="" id="contact1">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h3><i class="fa fa-map-marker"></i> Address</h3>
+                                <div id="organisasi-body"> </div>
+                                <div id="alamat-body"></div>
+                                <strong id="country" style="text-transform: uppercase;"></strong>
+                                </p>
+                            </div>
+                            <!-- /.col-sm-4 -->
+                            <div class="col-sm-4">
+                                <h3><i class="fa fa-phone"></i> Call center</h3>
+                                <p class="text-muted">Nomor kontak pengelola Geoportal:</p>
+                                <strong>
+                                        <div id="phone-body"></div>
+                                        <div id="fax-body"></div>
+                                    </strong>
+                            </div>
+                            <!-- /.col-sm-4 -->
+                            <div class="col-sm-4">
+                                <h3><i class="fa fa-envelope"></i> Email</h3>
+                                <p class="text-muted">Kritik dan saran juga dapat dikirimkan melalui alamat email berikut:</p>
+                                <p>
+                                    <strong><a href="mailto:info@big.go.id" id="email-body"></a></strong>
+                                </p>
+                            </div>
+                            <!-- /.col-sm-4 -->
+                        </div>
+                        <!-- /.row -->
+                        <hr>
+
+                        <!-- Untuk Map -->
+                        <!-- <div id="map"></div>
+                            <hr> -->
+
+                        <h2>Contact form</h2>
+                        <form id="formkontak" method="post">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="firstname">Nama</label>
+                                        <input type="text" class="form-control" id="nama">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" class="form-control" id="email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Alamat</label>
+                                        <input type="text" class="form-control" id="alamat">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" class="form-control" id="subject">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="message">Pesan</label>
+                                        <textarea id="pesan" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                    <a href="javascript:void(0);" class="btn btn-primary" onclick="save();" <i class="fa fa-envelope-o"></i>Kirim Pesan</a>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer area-->
+    <div class="footer-area">
+
+        <div class=" footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-footer">
+                            <h4>Tentang Kami </h4>
+                            <div class="footer-title-line"></div>
+                            <!-- Ambil api tentang kami sistem info dari frontend.js-->
+                            <div id="footer-tentang-kami"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-footer">
+                            <h4>Kontak Kami </h4>
+                            <div class="footer-title-line"></div>
+                            <!-- Ambil api sistem info dari frontend.js-->
+                            <div id="organisasi"></div>
+                            <div id="alamat-footer"></div>
+                            <div id="email-footer"></div>
+                            <div id="phone"></div>
+                            <div id="fax"></div>
+                            <span><a href="contact.html" style="color:#d27e04;">Hubungi Kami</a></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-footer news-letter">
+                            <h4>Didukung Oleh</h4>
+                            <div class="footer-title-line"></div>
+                            <p>Geoportal Palapa ini didukung oleh:</p>
+                            <div class="social pull-left">
+                                <a href="http://www.big.go.id">
+                                    <img src="images/logo_big.png" class="logobig" />
+                                </a>
+                                <a class="navbar-brand-bawah" href="index.html">
+                                    <img src="assets/img/logo_big.png" alt="" id="logosbawah">
+                                </a>
+                                <!-- <ul>
+                                        <li><a class="wow fadeInUp animated" href="https://twitter.com/geoportal_palapa"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/geoportal_palapa" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://plus.google.com/geoportal_palapa" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://instagram.com/geoportal_palapa" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://instagram.com/geoportal_palapa" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>  -->
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span><a href="statistik.html" style="color:#d27e04;margin-left: 12px;">Statistik Web</a></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="pull-left">
+                        <span> 2017 &copy; <a href="http://geoportal.big.go.id" target="_BLANK">Geoportal Palapa</a>. <a href="http://big.go.id" target="_BLANK">Badan Informasi Geospasial</a>. All rights reserved.  </span>
+                    </div>
+                    <!-- <div class="bottom-menu pull-right"> 
+                            <ul> 
+                                <li><a class="wow fadeInUp animated" href="index.html" data-wow-delay="0.2s">Home</a></li>
+                                <li><a class="wow fadeInUp animated" href="jelajah.html" data-wow-delay="0.3s">Jelajah</a></li>
+                                <li><a class="wow fadeInUp animated" href="pencarian.html" data-wow-delay="0.4s">Pencarian</a></li>
+                                <li><a class="wow fadeInUp animated" href="contact.html" data-wow-delay="0.6s">Kontak</a></li>
+                            </ul> 
+                        </div> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/bootstrap-hover-dropdown.js"></script>
+    <script src="assets/js/easypiechart.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/icheck.min.js"></script>
+    <script src="assets/js/price-range.js"></script>
+    <script src="assets/js/frontend.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        function save() {
+            //nama=data['nama'],email=data['email'],alamat=data['alamat'],subject=data['subject'],pesan=data['pesan']
+
+
+
+            var formdata = {
+                'nama': $('#nama').val(),
+                'email': $('#email').val(),
+                'alamat': $('#alamat').val(),
+                'subject': $('#subject').val(),
+                'pesan': $('#pesan').val()
+
+            };
+
+            // Returns successful data submission message when the entered information is stored in database.
+
+            if ($('#nama').val() == '' || $('#email').val() == '' || $('#alamat').val() == '' || $('#pesan').val() == '' || pesan == '') {
+                alert("Please Fill All Fields");
+            } else {
+                $.ajax({
+                    url: _api + 'kontakcreate',
+                    type: 'POST',
+                    data: formdata,
+                    dataType: 'JSON',
+                    success: function(data) {
+
+                        alert("Data Kontak berhasil disimpan");
+                        $('#formkontak')[0].reset();
+                        console.log(data);
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        alert('Error adding / update data');
+
+                    }
+                });
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

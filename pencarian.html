@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title id="title-pencarian"></title>
+    <meta name="description" content="Geoportal Palapa Badan Informasi Geospasial">
+    <meta name="author" content="Palapa">
+    <meta name="keyword" content="geoportal, big, palapa, geoportal palapa">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontello.css">
+    <link href="assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/icheck.min_all.css">
+    <link rel="stylesheet" href="assets/css/price-range.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <link rel="stylesheet" href="assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/js/jplist-master/css/jplist.pagination-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/ol.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/override_cari.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="assets/jelajah2/css/material-icons.css">
+    <!-- Openlayers -->
+    <link type="text/css" rel="stylesheet" href="assets/jelajah2/vendors/ol/ol.css">
+    <script type="text/javascript" src="assets/jelajah2/vendors/ol/ol.js"></script>
+
+
+
+    <link rel="stylesheet" href="assets/metadata/css/style.css">
+
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+
+    <nav class="navbar navbar-default ">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo_big.png" alt="" id="logos"></a>
+                <span class="text_logo wow fadeInUp animated pull-left">
+                        <b><font color="#f60">G</font><font color="#666" id="organisasi-logo">EOPORTAL PALAPA</font></font></b>
+                    </span>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse yamm" id="navigation">
+                <div class="button navbar-right">
+                    <a href="/gspalapa/">
+                        <button class="navbar-btn nav-button" data-wow-delay="0.4s">Login</button>
+                    </a>
+                </div>
+                <ul class="main-nav nav navbar-nav navbar-right">
+                    <li class="dropdown ymm-sw " data-wow-delay="0.5s">
+                        <a href="index.html" data-delay="200">Home</a>
+                    </li>
+
+                    <li><a class="" href="jelajah.html">Jelajah</a></li>
+                    <li><a class="active" href="pencarian.html">Pencarian</a></li>
+                    <!-- <li><a class="" href="contact.html">Kontak</a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- End of nav bar -->
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="page-head-content">
+                    <h1 class="page-title">Pencarian Data</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End page header -->
+
+    <!-- data list area -->
+    <div id="demo" class="properties-area recent-property" style="background-color: #FFF;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 p0 padding-top-40">
+                    <div class="blog-asside-right pr0">
+                        <div class="panel panel-default sidebar-menu">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Pencarian Detail</h3>
+                            </div>
+                            <div class="panel-body search-widget">
+                                <form action="pencarian.html" class=" form-inline" method="get" enctype="application/x-www-form-urlencoded">
+                                    <div class="jplist-panels">
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <!-- <input type="text" class="form-control" placeholder="  Kata kunci"> -->
+
+
+                                                    <input data-path=".title" type="text" value="" name="keyword" class="form-control keyword" placeholder="  Kata kunci" data-control-type="textbox" data-control-name="title-filter" data-control-action="filter">
+
+
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+
+                                                    <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Semua Kategori" data-control-type="filter-select" data-control-name="category-filter" data-control-action="filter" name="kategori">
+                                                        <option data-path="default" value="">Semua Kategori</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <select id="basic" name="walidata" class="selectpicker show-tick form-control walidata" data-control-type="filter-select" data-control-name="category-filter" data-control-action="filter"> 
+                                                      <option data-path="default" value="">Semua Walidata</option>         
+                                                      
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="padding-5">
+                                            <div class="row">
+                                                <div id="map" style="height:172px;padding-left: 10px; padding-right: 10px;"></div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <input value="" type="hidden" name="bbox" id="bbox" />
+                                                    <input class="button btn largesearch-btn" value="Search" type="submit">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-menu wow fadeInRight animated">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Walidata</h3>
+                            </div>
+                            <div class="panel-body recent-property-widget">
+                                <ul id='ul_walidata'>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-menu">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="margin-bottom: 0px">Kategori</h3>
+                            </div>
+                            <div class="panel-body recent-property-widget">
+                                <ul id='ul_kategori'>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-9  pr0 padding-top-40 properties-page">
+                    <div class="col-md-12 clear">
+                        <div class="col-xs-10 page-subheader sorting pl0">
+                            <div class="jplist-panel">
+                                <ul class="sort-by-list" data-control-type="sort-buttons-group" data-control-name="sort-buttons-group-1" data-control-action="sort" data-mode="single">
+
+                                    <li class="wow fadeInRight sort-asc active">
+                                        <a href="javascript:void(0);" data-datetime-format="{month}/{day}/{year}" data-path=".title" data-type="text" data-order="asc" data-selected="true">
+                                                 Sort by Name  ASC
+                                              <i class="fa fa-sort-amount-asc"></i>                 
+                                            </a>
+                                    </li>
+
+                                    <li class=" wow fadeInRight sort-desc">
+                                        <a href="javascript:void(0);" data-datetime-format="{month}/{day}/{year}" data-path=".title" data-type="text" data-order="desc" data-selected="true">
+                                                Sort by Name DESC  
+                                            <i class="fa fa-sort-numeric-desc"></i>                      
+                                            </a>
+                                    </li>
+                                </ul>
+                                <div class="items-per-page wow fadeInDown">
+                                    <label for="items_per_page"><b>Data list per page :</b></label>
+                                    <div class="sel">
+                                        <select class="jplist-select" data-control-type="items-per-page-select" data-control-name="paging" data-control-action="paging">
+                                                <label for="items_per_page"><b>Data list per page :</b></label> 
+                                                <option data-number="10" data-default="true"> 10 </option>
+                                                <option data-number="25"> 25 </option>
+                                                <option data-number="50"> 50 </option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-2 layout-switcher">
+                            <a class="layout-grid active" href="javascript:void(0);"> <i class="fa fa-th"></i> </a>
+                            <a class="layout-list" href="javascript:void(0);"> <i class="fa fa-th-list"></i> </a>
+                        </div>
+                        <!--/ .layout-switcher-->
+                    </div>
+                    <!--/ .List -->
+                    <div class="lists">
+                        <div class="col-md-12 clear">
+                            <div id="list-type" class="proerty-th list">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pull-right">
+                            <div class="jplist-panel panel-bottom">
+                                <!-- pagination -->
+                                <div class="jplist-pagination" data-control-animate-to-top="true" data-control-type="pagination" data-control-name="paging" data-control-action="paging">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer area-->
+    <div class="footer-area">
+
+        <div class=" footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-footer">
+                            <h4>Tentang Kami </h4>
+                            <div class="footer-title-line"></div>
+                            <!-- Ambil api tentang kami sistem info dari frontend.js-->
+                            <div id="footer-tentang-kami"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-footer">
+                            <h4>Kontak Kami </h4>
+                            <div class="footer-title-line"></div>
+                            <!-- Ambil api sistem info dari frontend.js-->
+                            <div id="organisasi"></div>
+                            <div id="alamat-footer"></div>
+                            <div id="email-footer"></div>
+                            <div id="phone"></div>
+                            <div id="fax"></div>
+                            <span><a href="contact.html" style="color:#d27e04;">Hubungi Kami</a></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow">
+                        <div class="single-footer news-letter">
+                            <h4>Didukung Oleh</h4>
+                            <div class="footer-title-line"></div>
+                            <p>Geoportal Palapa ini didukung oleh:</p>
+                            <div class="social pull-left">
+                                <a href="http://www.big.go.id">
+                                    <img src="images/logo_big.png" class="logobig" />
+                                </a>
+                                <a class="navbar-brand-bawah" href="index.html">
+                                    <img src="assets/img/logo_big.png" alt="" id="logosbawah">
+                                </a>
+                                <!-- <ul>
+                                    <li><a class="wow fadeInUp animated" href="https://twitter.com/geoportal_palapa"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://www.facebook.com/geoportal_palapa" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://plus.google.com/geoportal_palapa" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://instagram.com/geoportal_palapa" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://instagram.com/geoportal_palapa" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span><a href="statistik.html" style="color:#d27e04;margin-left: 12px;">Statistik Web</a></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="pull-left">
+                        <span> 2017 &copy; <a href="http://geoportal.big.go.id" target="_BLANK">Geoportal Palapa</a>. <a href="http://big.go.id" target="_BLANK">Badan Informasi Geospasial</a>. All rights reserved.  </span>
+                    </div>
+                    <!-- <div class="bottom-menu pull-right">
+                        <ul>
+                            <li><a class="wow fadeInUp animated" href="index.html" data-wow-delay="0.2s">Home</a></li>
+                            <li><a class="wow fadeInUp animated" href="jelajah.html" data-wow-delay="0.3s">Jelajah</a></li>
+                            <li><a class="wow fadeInUp animated" href="pencarian.html" data-wow-delay="0.4s">Pencarian</a></li>
+                            <li><a class="wow fadeInUp animated" href="contact.html" data-wow-delay="0.6s">Kontak</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal View Peta -->
+    <div class="modal fade" id="viewPeta" role="dialog">
+        <div class="modal-dialog" style="width: 50%;">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">WMS Preview</h4>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div id="i_prev_map" class="map"></div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary submitBtn" onclick="submitContactForm()">SUBMIT</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Metadata -->
+    <div class="modal fade" id="metaData" role="dialog">
+        <div class="modal-dialog" style="width:50%;;height:65%">
+            <div class="modal-content" id="modalmeta">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    <h4 class="modal-title" id="myModalLabel">Metadata</h4>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+
+                    <div id="metadata1">
+
+
+
+                        <div class="row">
+
+
+                            <form name="form_metadata" class="form-horizontal" role="form">
+
+                                <div class="container col-sm-12">
+
+                                    <div class="accordion-option">
+                                        <h3 class="title"></h3>
+                                        <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion200"></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="panel-group" id="accordion200" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne200">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne200" aria-expanded="true" aria-controls="collapseOne200">
+                                                       Metadata
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne200" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne200">
+                                                <div class="panel-body">
+
+
+                                                    <div class="form-group" id="file_title">
+                                                        <label class="control-label col-sm-3 ">Title</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="type_title" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="file_subject">
+                                                        <label class="control-label col-sm-3 ">Subject</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="type_subject" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="file_dataset">
+                                                        <label class="control-label col-sm-3 ">Type </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="type_dataset" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="file_abstract">
+                                                        <label class="control-label col-sm-3 ">Abstract </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="type_abstract" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="file_identifier">
+                                                        <label class="control-label col-sm-3 ">Identifier </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="type_identifier" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="file_wms">
+                                                        <label class="control-label col-sm-3 ">WMS </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="type_wms" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="file_wfs">
+                                                        <label class="control-label col-sm-3 ">WFS </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="type_wfs" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="file_bbox">
+                                                        <label class="control-label col-sm-3 ">Bounding box</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="type_bbox" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                </div>
+                                                <!-- div class="panel-body" -->
+                                            </div>
+                                            <!-- div id="collapseOne200" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne200" -->
+                                        </div>
+                                        <!-- div class="panel panel-default" -->
+
+
+                                    </div>
+                                    <!-- div class="panel-group" id="accordion200" role="tablist" aria-multiselectable="true" -->
+
+                                </div>
+                                <!-- div class="container col-sm-12" -->
+                            </form>
+                            <!-- form name="form_metadata" class="form-horizontal" role="form" -->
+                        </div>
+                        <!-- div class="row" -->
+
+
+                    </div>
+
+                    <div id="metadata2" hidden="true">
+                        <!-- metadata lengkap -->
+
+
+
+                        <div class="row">
+
+                            <!--- =============================================  -->
+                            <form name="form_metadata" class="form-horizontal" role="form">
+
+                                <div class="container col-sm-12">
+
+
+                                    <div class="accordion-option">
+                                        <!--  <h3 class="title">Metadata</h3> -->
+                                        <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+
+
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h6 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                                      Metadata
+                                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                                <div class="panel-body">
+
+                                                    <div class="form-group" id="fileIdentifier1">
+                                                        <label class="control-label col-sm-3 ">FIle Identifier</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="fileIdentifier" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="language1">
+                                                        <label class="control-label col-sm-3" for="inputError">Language</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="language" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="characterSet1">
+                                                        <label class="control-label col-sm-3">Characterset</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="characterSet" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="hierarchyLevel1">
+                                                        <label class="control-label col-sm-3">HierarchyLevel</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="hierarchyLevel" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="metadataStandardName1">
+                                                        <label class="control-label col-sm-3">Metadatastandardname</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="metadataStandardName" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="metadataStandardVersion1">
+                                                        <label class="control-label col-sm-3">Metadatastandardversion</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="metadataStandardVersion" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="datestamp1">
+                                                        <label class="control-label col-sm-3">Datestamp</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="datestamp" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="dataSetURI1">
+                                                        <label class="control-label col-sm-3">DataSetURI</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="dataSetURI" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading2">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                                                  Contact
+                                                                                </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                                <div class="panel-body">
+                                                    <!--  <div class="panel panel-default">
+                                                                                    <div class="panel-heading" role="tab" id="heading3">
+                                                                                      <h4 class="panel-title">
+                                                                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                                                                      CI_ResponsibleParty
+                                                                                      </a>
+                                                                                    </h4>
+                                                                                    </div> -->
+                                                    <!-- <div id="collapse3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading3">
+                                                                                      <div class="panel-body"> -->
+
+                                                    <div class="form-group" id="individualName1">
+                                                        <label class="control-label col-sm-3 ">IndividualName</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="individualName" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="organisationName1">
+                                                        <label class="control-label col-sm-3">OrganisationName</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="organisationName" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="positionName1">
+                                                        <label class="control-label col-sm-3" for="inputError">PositionName</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="positionName" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="phone1">
+                                                        <label class="control-label col-sm-3">Phone</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="phone" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="facsimile1">
+                                                        <label class="control-label col-sm-3">Facsimile</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="facsimile" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="deliveryPoint1">
+                                                        <label class="control-label col-sm-3">DeliveryPoint</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="deliveryPoint" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="city1">
+                                                        <label class="control-label col-sm-3">City</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="city" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="postalCode1">
+                                                        <label class="control-label col-sm-3">PostalCode</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="postalCode" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="country1">
+                                                        <label class="control-label col-sm-3">Country</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="country" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="electronicMailAddress1">
+                                                        <label class="control-label col-sm-3">ElectronicMailAddress</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="electronicMailAddress" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="linkage1">
+                                                        <label class="control-label col-sm-3">Linkage</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="linkage" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="protocol1">
+                                                        <label class="control-label col-sm-3">Protocol</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="protocol" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="function1">
+                                                        <label class="control-label col-sm-3">Function</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="function" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="hoursOfService1">
+                                                        <label class="control-label col-sm-3">hoursOfService</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="hoursOfService" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="contactInstructions1">
+                                                        <label class="control-label col-sm-3">contactInstructions</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="contactInstructions" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="rolecontact1">
+                                                        <label class="control-label col-sm-3">Role</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="rolecontact" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <!--    </div>
+                                                                                    </div>
+                                                                                  </div>  -->
+                                                    <!-- class="panel panel-default" -->
+
+
+                                                </div>
+                                                <!-- panel body collapse2 -->
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading4">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                                                        SpatialRepresentationinfo
+                                                                        </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                                                <div class="panel-body">
+
+                                                    <div class="form-group" id="topologiLevel1">
+                                                        <label class="control-label col-sm-3 ">TopologiLevel</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="topologiLevel" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="geometriObjects1">
+                                                        <label class="control-label col-sm-3">GeometriObjects</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="geometriObjects" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading5">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                                                        ReferenceSystemInfo
+                                                                        </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                                <div class="panel-body">
+
+                                                    <div class="form-group" id="title_refsystem1">
+                                                        <label class="control-label col-sm-3 ">Title</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="title_refsystem" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="date_refsystem1">
+                                                        <label class="control-label col-sm-3">Date</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="date_refsystem" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="dateType_refsystem1">
+                                                        <label class="control-label col-sm-3">DateType</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="dateType_refsystem" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="organisationName_refsystem1">
+                                                        <label class="control-label col-sm-3">OrganisationName</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="organisationName_refsystem" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="linkage_refsystem1">
+                                                        <label class="control-label col-sm-3" for="inputError">Linkage</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="linkage_refsystem" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="role_refsystem1">
+                                                        <label class="control-label col-sm-3">Role</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="role_refsystem" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="code_refsystem1">
+                                                        <label class="control-label col-sm-3">Code</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="code_refsystem" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="version_refsystem1">
+                                                        <label class="control-label col-sm-3">Version</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="version_refsystem" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading6">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                                                       IdentificationInfo
+                                                                        </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                                                <div class="panel-body">
+
+                                                    <div class="form-group" id="title_identification1">
+                                                        <label class="control-label col-sm-3 ">Title</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="title_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="date_identification1">
+                                                        <label class="control-label col-sm-3">Date</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="date_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="dateType_identification1">
+                                                        <label class="control-label col-sm-3 ">DateType </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="dateType_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="abstract_identification1">
+                                                        <label class="control-label col-sm-3">Abstract </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="abstract_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- <div class="form-group">
+                                                                                                <label class="control-label col-sm-3 " >Status </label>
+                                                                                                <div class="col-sm-9">
+                                                                                                        <input type="text" class="form-control" id="status_identification"  disabled="true" />
+                                                                                                </div>        
+                                                                                          </div> -->
+
+                                                    <div class="form-group" id="resourceMaintenance_identification1">
+                                                        <label class="control-label col-sm-3">ResourceMaintenance </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="resourceMaintenance_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="descriptiveKeywords_identification1">
+                                                        <label class="control-label col-sm-3 ">DescriptiveKeywords </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="descriptiveKeywords_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="resourceConstraints_identification1">
+                                                        <label class="control-label col-sm-3">ResourceConstraints </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="resourceConstraints_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="spatialRepresentationType_identification1">
+                                                        <label class="control-label col-sm-3 ">SpatialRepresentationType </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="spatialRepresentationType_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="language_identification1">
+                                                        <label class="control-label col-sm-3">Language_identification </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="language_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="CharacterSetCode_identification1">
+                                                        <label class="control-label col-sm-3">CharacterSetCode </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="CharacterSetCode_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="topicCategory_identification1">
+                                                        <label class="control-label col-sm-3 ">TopicCategory </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="topicCategory_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group" id="westBoundLongitude_identification1">
+                                                        <label class="control-label col-sm-3 ">WestBoundLongitude </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="westBoundLongitude_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="eastBoundLongitude_identification1">
+                                                        <label class="control-label col-sm-3">EastBoundLongitude </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="eastBoundLongitude_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="southBoundLatitude_identification1">
+                                                        <label class="control-label col-sm-3">SouthBoundLatitude </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="southBoundLatitude_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="northBoundLatitude_identification1">
+                                                        <label class="control-label col-sm-3">NorthBoundLatitude </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="northBoundLatitude_identification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading7">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                                                       DistributionInfo
+                                                                        </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                                                <div class="panel-body">
+
+
+
+
+
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading" role="tab" id="heading3">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                                                      Distributor
+                                                                                      </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                                            <div class="panel-body">
+
+                                                                <div class="form-group" id="Distributor_individualName1">
+                                                                    <label class="control-label col-sm-3 ">IndividualName</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_individualName" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_organisationName1">
+                                                                    <label class="control-label col-sm-3">OrganisationName</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_organisationName" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="form-group" id="Distributor_positionName1">
+                                                                    <label class="control-label col-sm-3" for="inputError">PositionName</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_positionName" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_phone1">
+                                                                    <label class="control-label col-sm-3">Phone</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_phone" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_facsimile1">
+                                                                    <label class="control-label col-sm-3">Facsimile</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_facsimile" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_deliveryPoint1">
+                                                                    <label class="control-label col-sm-3">DeliveryPoint</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_deliveryPoint" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_city1">
+                                                                    <label class="control-label col-sm-3">City</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_city" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_postalCode1">
+                                                                    <label class="control-label col-sm-3">PostalCode</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_postalCode" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_country1">
+                                                                    <label class="control-label col-sm-3">Country</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_country" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_electronicMailAddress1">
+                                                                    <label class="control-label col-sm-3">ElectronicMailAddress</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_electronicMailAddress" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="form-group" id="Distributor_linkage1">
+                                                                    <label class="control-label col-sm-3">Linkage</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_linkage" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_protocol1">
+                                                                    <label class="control-label col-sm-3">Protocol</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_protocol" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_function1">
+                                                                    <label class="control-label col-sm-3">Function</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_function" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_hoursOfService1">
+                                                                    <label class="control-label col-sm-3">hoursOfService</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_hoursOfService" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_contactInstructions1">
+                                                                    <label class="control-label col-sm-3">contactInstructions</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_contactInstructions" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" id="Distributor_role1">
+                                                                    <label class="control-label col-sm-3">Role</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="Distributor_role" disabled="true" />
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading" role="tab" id="heading31">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion31" href="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                                                                                     Transfer Options
+                                                                                      </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapse31" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading31">
+                                                            <div class="panel-body">
+
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading" role="tab" id="heading311">
+                                                                        <h4 class="panel-title">
+                                                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion311" href="#collapse311" aria-expanded="false" aria-controls="collapse311">
+                                                                                                 Transfer Options WFS
+                                                                                                  </a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse311" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading311">
+                                                                        <div class="panel-body">
+
+
+
+
+                                                                            <div class="form-group" id="wfs_linkage1">
+                                                                                <label class="control-label col-sm-3">Linkage</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wfs_linkage" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group" id="wfs_protocol1">
+                                                                                <label class="control-label col-sm-3">Protocol</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wfs_protocol" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="form-group" id="wfs_name1">
+                                                                                <label class="control-label col-sm-3">name</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wfs_name" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group" id="wfs_description1">
+                                                                                <label class="control-label col-sm-3">description</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wfs_description" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="form-group" id="wfs_function1">
+                                                                                <label class="control-label col-sm-3">Function</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wfs_function" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+
+
+
+
+                                                                        </div>
+                                                                        <!--panel body -->
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading" role="tab" id="heading312">
+                                                                        <h4 class="panel-title">
+                                                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion312" href="#collapse312" aria-expanded="false" aria-controls="collapse312">
+                                                                                                 Transfer Options WMS
+                                                                                                  </a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse312" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading312">
+                                                                        <div class="panel-body">
+
+
+
+                                                                            <div class="form-group" id="wms_linkage1">
+                                                                                <label class="control-label col-sm-3">Linkage</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wms_linkage" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group" id="wms_protocol1">
+                                                                                <label class="control-label col-sm-3">Protocol</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wms_protocol" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="form-group" id="wms_name1">
+                                                                                <label class="control-label col-sm-3">name</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wms_name" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group" id="wms_description1">
+                                                                                <label class="control-label col-sm-3">description</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wms_description" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="form-group" id="wms_function1">
+                                                                                <label class="control-label col-sm-3">Function</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="wms_function" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+
+
+
+
+                                                                        </div>
+                                                                        <!--panel body -->
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading" role="tab" id="heading313">
+                                                                        <h4 class="panel-title">
+                                                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion313" href="#collapse313" aria-expanded="false" aria-controls="collapse313">
+                                                                                                 Transfer Options ZIP Shapefile
+                                                                                                  </a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse313" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading313">
+                                                                        <div class="panel-body">
+
+
+
+
+                                                                            <div class="form-group" id="zip_linkage1">
+                                                                                <label class="control-label col-sm-3">Linkage</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="zip_linkage" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group" id="zip_protocol1">
+                                                                                <label class="control-label col-sm-3">Protocol</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="zip_protocol" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="form-group" id="zip_name1">
+                                                                                <label class="control-label col-sm-3">name</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="zip_name" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group" id="zip_description1">
+                                                                                <label class="control-label col-sm-3">description</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="zip_description" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="form-group" id="zip_function1">
+                                                                                <label class="control-label col-sm-3">Function</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="zip_function" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+
+
+
+
+                                                                        </div>
+                                                                        <!--panel body -->
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading" role="tab" id="heading314">
+                                                                        <h4 class="panel-title">
+                                                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion314" href="#collapse314" aria-expanded="false" aria-controls="collapse314">
+                                                                                                 Transfer Options ImageWMS
+                                                                                                  </a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse314" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading314">
+                                                                        <div class="panel-body">
+
+
+
+
+                                                                            <div class="form-group">
+                                                                                <label class="control-label col-sm-3">Linkage</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="img_linkage" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group" id="img_protocol1">
+                                                                                <label class="control-label col-sm-3">Protocol</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="img_protocol" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="form-group" id="img_name1">
+                                                                                <label class="control-label col-sm-3">name</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="img_name" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group" id="img_description1">
+                                                                                <label class="control-label col-sm-3">description</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="img_description" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="form-group" id="img_function1">
+                                                                                <label class="control-label col-sm-3">Function</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text" class="form-control" id="img_function" disabled="true" />
+                                                                                </div>
+                                                                            </div>
+
+
+
+
+
+
+                                                                        </div>
+                                                                        <!--panel body -->
+
+                                                                    </div>
+                                                                </div>
+
+
+
+
+
+                                                            </div>
+                                                            <!--panel body -->
+
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading8">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                                                      MetadataMaintenance
+                                                                        </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                                                <div class="panel-body">
+
+                                                    <div class="form-group" id="maintenanceAndUpdateFrequency1">
+                                                        <label class="control-label col-sm-3">MaintenanceAndUpdateFrequency </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="maintenanceAndUpdateFrequency" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="maintenanceNote1">
+                                                        <label class="control-label col-sm-3">MaintenanceNote </label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="maintenanceNote" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading9">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                                                      MetadataConstrains
+                                                                        </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                                                <div class="panel-body">
+
+                                                    <div class="form-group" id="classification1">
+                                                        <label class="control-label col-sm-3 ">Classification</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="classification" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="usernote1">
+                                                        <label class="control-label col-sm-3">UserNote</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="usernote" disabled="true" />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </form>
+
+
+                            <!-- =================================================================== -->
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- metadata lengkap -->
+
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button type="button" id="thebutton" class="btn btn-primary submitBtn" onclick="metadataFull()">Metadata Lengkap</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Download -->
+    <div class="modal fade" id="downloadModal" role="dialog">
+        <div class="modal-dialog" style="width: 50%;">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    <h4 class="modal-title" id="myModalLabel">Konfirmasi Download</h4>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    Apakah anda ingin mengunduh dataset ini?
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary submitBtn" onclick="download()" href="http://www.big.go.id">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="assets/metadata/js/index.js"></script>
+
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+
+    <!--  <script src="assets/js/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+     -->
+
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/bootstrap-hover-dropdown.js"></script>
+    <script src="assets/js/easypiechart.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/icheck.min.js"></script>
+    <script src="assets/js/price-range.js"></script>
+    <script src="assets/js/ol/ol.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/pencarian.js"></script>
+    <script src="assets/js/metadata.js"></script>
+
+
+
+    <script src="assets/js/jplist-master/js/jplist.core.min.js"></script>
+    <!-- jPList sort buttons control -->
+    <script src="assets/js/jplist-master/js/jplist.sort-buttons.min.js"></script>
+    <script src="assets/js/jplist-master/js/jplist.list-grid-view.min.js"></script>
+    <script src="assets/js/jplist-master/js/jplist.pagination-bundle.min.js"></script>
+    <script src="assets/js/jplist-master/js/jplist.textbox-filter.min.js"></script>
+    <script src="assets/js/jplist-master/js/jplist.filter-dropdown-bundle.min.js"></script>
+
+    <script type="text/javascript">
+    </script>
+
+</body>
+
+</html>
