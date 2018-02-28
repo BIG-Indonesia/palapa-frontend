@@ -315,6 +315,7 @@ body {
     background-color: #f1f1f1;
     /* border: 1px solid #d3d3d3; */
     text-align: center;
+    min-height: 350px;
     width: 400px;
     /* height: 500px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -801,6 +802,7 @@ input[type=range]+.thumb.active .value {
     /* display: table-column; */
     transform: translateY(-50%);
     padding: 25px;
+    font-size: smaller;
 }
 
 .dropzone.dz-clickable .dz-message,

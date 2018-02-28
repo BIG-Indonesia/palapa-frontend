@@ -1084,10 +1084,13 @@ var box_ukur_visible = false;
 var start_measure = false;
 
 $(function() {
-    var dropzone = new Dropzone("#dropzone", {
+    var dropzoneOptions = {
         url: palapa_api_url + "fakepath",
-        acceptedFiles: '.zip,.ZIP,.gpx,.GPX,.csv,.CSV'
-    });
+        acceptedFiles: '.zip,.ZIP,.gpx,.GPX,.csv,.CSV',
+        clickable: true
+    };
+    dropzoneOptions.clickable = '#dropinfo';
+    var dropzone = new Dropzone("#dropzone", dropzoneOptions);
     dropzone.on("success", function(file) {
         handleFileSelect(file);
         Materialize.toast('Berkas terupload!', 3000, 'rounded');
@@ -1215,6 +1218,9 @@ function leftsidebartoggle() {
 }
 
 function dragElement(elmnt) {
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
     var pos1 = 0,
         pos2 = 0,
         pos3 = 0,
@@ -1234,13 +1240,23 @@ function dragElement(elmnt) {
     }
 
     function elementDrag(e) {
+        console.log("OFFRIGHT", elmnt.offsetLeft + 400, elmnt.offsetTop, w, h);
         e = e || window.event;
         pos1 = pos3 - e.clientX;
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        if (elmnt.offsetLeft + 400 <= w && elmnt.offsetTop > 0) {
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        } else {
+            if (elmnt.offsetTop <= 0) {
+                elmnt.style.top = 1 + "px";
+            } else {
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            }
+            elmnt.style.left = (w - 401) + "px";
+        }
     }
 
     function closeDragElement() {
