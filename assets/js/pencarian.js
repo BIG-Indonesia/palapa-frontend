@@ -151,7 +151,7 @@ $.get(_api + "sisteminfo", function(data) {
     $('#phone').text('Telp: ' + data['phone']);
     $('#fax').text('Fax: ' + data['fax']);
     $('#fax-body').text('Fax: ' + data['fax']);
-    $('#footer-tentang-kami').text(data['tentangkami']);
+    $('#footer-tentang-kami').text(data['deskripsi']);
 
     $('#organisasi-logo').empty();
     $('#organisasi-logo').text('EOPORTAL ' + data['organization']);
@@ -237,7 +237,7 @@ jQuery.ajax({
 
 
 
-            $('#list-type').append('<div class="col-sm-6 col-md-4 p0"><div class="box-two proerty-item"><div class="item-thumb"><a><img src="' + image2 + '"</a></div><div class="item-entry overflow"><div id="ltitle"><a href="">' + listdata[i]['title'] + ' </a></div><div class="dot-hr"></div><span class="pull-left"><b>' + listdata[i]['keywords'] + '</b></span><span class="proerty-price pull-right"><i id="' + listdata[i]['identifier'] + '" class="material-icons preview" title="Lihat peta"><span id="lihatpeta" class="cursor_pointer">map</span><div style="display:none"><div id="ident">' + listdata[i]['identifier'] + '</div><div id="minx">' + minx + '</div><div id="miny">' + miny + '</div><div id="maxx">' + maxx + '</div><div id="maxy">' + maxy + '</div></div></i><i id="' + listdata[i]['identifier'] + '" class="material-icons" title="Lihat metadata" data-toggle="modal" data-target="#metaData"><span id="infopeta" class="cursor_pointer">info</span><div style="display:none"><div id="1ident">' + listdata[i]['identifier'] + '</div><div id="1wfs">' + listdata[i]['links'].split(',')[3].split('^')[0] + '</div><div id="1wms">' + listdata[i]['links'].split(',')[6].split('^')[0] + '</div><div id="1keywords">' + listdata[i]['keywords'] + '</div><div id="1abstract">' + listdata[i]['abstract'] + '</div><div id="1title">' + listdata[i]['title'] + '</div><div id="1type">' + listdata[i]['type'] + '</div><div id="1minx">' + minx + '</div><div id="1miny">' + miny + '</div><div id="1maxx">' + maxx + '</div><div id="1maxy">' + maxy + '</div></div></i><i class="material-icons" title="Download" id="' + listdata[i]['identifier'] + '" ><span class="cursor_pointer"  id="linkdonwload">cloud_download</span><div id="linkurl" style="display:none;">' + download + '</div></i></span><div class="property-icon"><b>' + array[0][0] + '</b></div></div></div>');
+            $('#list-type').append('<div class="list-item"> <div class="col-sm-6 col-md-4 p0"><div class="box-two proerty-item"><div class="item-thumb"><a><img src="' + image2 + '"</a></div><div class="item-entry overflow"><div id="ltitle"><a href="">' + listdata[i]['title'] + ' </a></div><div class="dot-hr"></div><span class="pull-left"><b>' + listdata[i]['keywords'] + '</b></span><span class="proerty-price pull-right"><i id="' + listdata[i]['identifier'] + '" class="material-icons preview" title="Lihat peta"><span id="lihatpeta" class="cursor_pointer">location_on</span><div style="display:none"><div id="ident">' + listdata[i]['identifier'] + '</div><div id="minx">' + minx + '</div><div id="miny">' + miny + '</div><div id="maxx">' + maxx + '</div><div id="maxy">' + maxy + '</div></div></i><i id="' + listdata[i]['identifier'] + '" class="material-icons" title="Lihat metadata" data-toggle="modal" data-target="#metaData"><span id="infopeta" class="cursor_pointer">info</span><div style="display:none"><div id="1ident">' + listdata[i]['identifier'] + '</div><div id="1wfs">' + listdata[i]['links'].split(',')[3].split('^')[0] + '</div><div id="1wms">' + listdata[i]['links'].split(',')[6].split('^')[0] + '</div><div id="1keywords">' + listdata[i]['keywords'] + '</div><div id="1abstract">' + listdata[i]['abstract'] + '</div><div id="1title">' + listdata[i]['title'] + '</div><div id="1type">' + listdata[i]['type'] + '</div><div id="1minx">' + minx + '</div><div id="1miny">' + miny + '</div><div id="1maxx">' + maxx + '</div><div id="1maxy">' + maxy + '</div></div></i><i class="material-icons" title="Download" id="' + listdata[i]['identifier'] + '" ><span class="cursor_pointer"  id="linkdonwload">cloud_download</span><div id="linkurl" style="display:none;">' + download + '</div></i></span><div class="property-icon"><b>' + array[0][0] + '</b></div></div></div></div>');
 
             // $('#list-type').append(' <div class="list-item"> <div class="col-sm-6 col-md-4 p0"><div class="box-two proerty-item"><div class="item-thumb"><a href="#"><img src="' + image2 + '"</a></div><div class="item-entry overflow"><h5><a href="" class="title">' + listdata[i]['title'] + ' </a></h5><div class="dot-hr"></div><span class="pull-left"><b class="' + listdata[i]['keywords'] + '">' + listdata[i]['keywords'] + '</b></span><span class="proerty-price pull-right"><img src="assets/img/maps_look.png" width="20px" height="20px" title="Lihat peta" data-toggle="modal" data-target="#viewPeta" class="cursor_pointer"><img src="assets/img/metadata.png"  id="' + listdata[i]['identifier'] + '" width="20px" height="20px" title="Lihat metadata" data-toggle="modal" data-target="#metaData" class="cursor_pointer"><img src="assets/img/download.png" width="20px" height="20px" title="Download" data-toggle="modal" data-target="#downloadModal" class="cursor_pointer"></span><p style="display: none;">' + listdata[i]['abstract'] + '</p><div class="property-icon"><b class="' + array[0][0] + '">' + array[0][0] + '</b></div></div></div></div> ');
         }
@@ -327,7 +327,11 @@ var map = new ol.Map({
             source: new ol.source.OSM()
         })
     ],
-    controls: ol.control.defaults({ attribution: false }),
+    controls: ol.control.defaults({
+        attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+            collapsible: false
+        })
+    }),
     view: new ol.View({
         //center: ol.proj.fromLonLat([118,5]),
         center: ol.proj.transform([118, 5], 'EPSG:4326', 'EPSG:3857'),
@@ -358,6 +362,11 @@ var linkdownload;
 $(document).ready(function() {
 
 
+   
+       
+     
+
+
 
     console.log('halo2', extent2);
 
@@ -375,9 +384,11 @@ $(document).ready(function() {
 
     // map.getView().fit(extent, map.getSize());
 
+
+
     $(document).on('click', '.proerty-price.pull-right i', function() {
         console.log($(this).find('#lihatpeta').text(), $(this).find('#linkdonwload').text());
-        if ($(this).find('#lihatpeta').text() == 'map') {
+        if ($(this).find('#lihatpeta').text() == 'location_on') {
             // console.log($(this).find('#lihatpeta').text());
             p_id = $(this).attr('id');
             console.log(p_id)
@@ -499,7 +510,6 @@ function i_prev_map() {
 
     window.prevmap = new ol.Map({
         layers: [osm],
-        controls: ol.control.defaults({ attribution: false }),
         target: 'i_prev_map',
         view: new ol.View({
             projection: 'EPSG:4326',
