@@ -1,7 +1,7 @@
 function open_metadata($id) {
 
     // var fulluri = _cswURL + "?service=CSW&version=2.0.2&request=GetRecordById&ElementSetName=full&Id=" + $id + "&outputSchema=http://www.isotc211.org/2005/gmd&outputFormat=application/json";
-    var fulluri = "/" + "?service=CSW&version=2.0.2&request=GetRecordById&ElementSetName=full&Id=" + $id + "&outputSchema=http://www.isotc211.org/2005/gmd&outputFormat=application/json";
+    var fulluri = window.location.hostname + "?service=CSW&version=2.0.2&request=GetRecordById&ElementSetName=full&Id=" + $id + "&outputSchema=http://www.isotc211.org/2005/gmd&outputFormat=application/json";
 
     console.log(fulluri);
 
