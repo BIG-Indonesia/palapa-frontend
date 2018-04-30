@@ -4,9 +4,9 @@ function open_metadata($id) {
 
     console.log(fulluri);
 
-    $.ajax({
+    $.ajax(fulluri, {
         //url : "sumbawa.json",
-        url: fulluri,
+        // url: fulluri,
         type: "GET",
         dataType: "JSON",
         success: function(data) {
