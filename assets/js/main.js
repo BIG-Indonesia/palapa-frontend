@@ -1,3 +1,5 @@
+var flexmap = false
+
 $(window).load(function () { // makes sure the whole site is loaded
     $('#status').fadeOut(); // will first fade out the loading animation
     $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
@@ -32,6 +34,9 @@ $(document).ready(function () {
     });
 
 });
+
+
+  
 $(document).ready(function () {
     $("#bg-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
@@ -80,12 +85,20 @@ $(document).ready(function () {
     $SearchToggle.hide();
 
     $('.search-form .toggle-btn').on('click', function (e) {
+        console.log('0kkkkkk');     
         e.preventDefault();
-        $SearchToggle.slideToggle(300);    
-        setTimeout(() => {
-            i_search_map();
-            searchmap.getView().fit(simpulextent, searchmap.getSize());
-        }, 1000);
+        $SearchToggle.slideToggle(300); 
+
+         if (!window.flexmap) {
+                    setTimeout(() => {
+                        i_search_map();
+                        searchmap.getView().fit(simpulextent, searchmap.getSize());
+                        window.flexmap = true
+                    }, 1000);
+
+         }           
+
+       
     });
 
     setTimeout(function () {
