@@ -22,7 +22,7 @@ $.get(_api + "jumlahdataset", function(data) {
     //console.log(listdata);
     for (i = 0; i < listdata.length; i++) {
         console.log(listdata[i]);
-        $('#kategori_dataset').append('<div class="col-sm-2 col-xs-6"><div class="count-item"><div class="count-item-circle"><img src="data:;base64,' + listdata[i]['logo'] + '" alt="" style="height:80px;"></div><div class="chart"><h6><a href="pencarian.html?keyword=' + listdata[i]['keywords'] + '&kategori=&walidata=&bbox=">' + listdata[i]['keywords'] + '</a></h6><span class="jumlah_dataset badge badge-pill badge-danger">' + listdata[i]['jumlah'] + '</span></div></div></div>');
+        $('#kategori_dataset').append('<div class="col-sm-2 col-xs-6"><div class="count-item"><div class="count-item-circle"><img src="data:;base64,' + listdata[i]['logo'] + '" alt="" style="height:80px;"></div><div class="chart"><h6><a href="pencarian.html?kategori=' + listdata[i]['keywords'] + '&keyword=&walidata=&bbox=">' + listdata[i]['keywords'] + '</a></h6><span class="jumlah_dataset badge badge-pill badge-danger">' + listdata[i]['jumlah'] + '</span></div></div></div>');
 
         $('#lunchBegins').append('<option>' + listdata[i]['keywords'] + '</option>');
 
@@ -239,11 +239,16 @@ function strip(html) {
 
 $.get(_api + 'berita/list', function(data) {
     items = JSON.parse(data);
-    for (i = 0; i < items.length; i++) {
-        $("#bj_" + i).text(items[i].judul);
-        $("#bi_" + i).text($(items[i].isiberita).text());
-        // $("#bi_" + i).text(strip(items[i].isiberita));
-        console.log(items[i]);
+	if (items.length < 1) {
+        $("#beritawrapper").empty();
+    } else {
+        for (i = 0; i < items.length; i++) {
+            $("#bj_" + i).text(items[i].judul);
+            $("#bi_" + i).text($(items[i].isiberita).text());
+            // $("#bi_" + i).text(strip(items[i].isiberita));
+            $("#href" + i).attr("href", "detail_berita.html?id=" + items[i].id)
+            console.log(items[i]);
+        }
     }
 });
 
@@ -270,6 +275,7 @@ function i_prev_map() {
 
     window.prevmap = new ol.Map({
         layers: [osm],
+		 controls: ol.control.defaults({ attribution: false }),
         target: 'i_prev_map',
         view: new ol.View({
             projection: 'EPSG:4326',
@@ -287,6 +293,7 @@ function i_search_map() {
 
     window.searchmap = new ol.Map({
         layers: [osm],
+		 controls: ol.control.defaults({ attribution: false }),
         target: 'i_search_map',
         view: new ol.View({
             projection: 'EPSG:4326',
