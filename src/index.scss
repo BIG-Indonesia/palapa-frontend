@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #F1F1F1;
+}
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+.layout-small {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
+.layout-medium {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
+.slick-dots li button:before {
+  font-size: 15px;
+  color: #C47373;
+}
+.slick-dots li.slick-active button:before {
+  color: #C47373;
+}
+.ReactModal__Overlay {
+  z-index: 9999;
+}
