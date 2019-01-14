@@ -1,5 +1,5 @@
 try {
-    var base_url = REPGSMANAGERDOM
+    var base_url = 'http://REPGSMANAGERDOM'
     var palapa_api_url = base_url + '/api/'
     var _proxy = base_url + '/proxy?url='
     var local_gs = base_url + '/geoserver/wms'
