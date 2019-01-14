@@ -1,8 +1,8 @@
 try {
-    var base_url = _baseURL
-    var palapa_api_url = _api
-    var _proxy = _proxy
-    var local_gs = _wmsURL
+    var base_url = REPGSMANAGERDOM
+    var palapa_api_url = base_url + '/api/'
+    var _proxy = base_url + '/proxy?url='
+    var local_gs = base_url + '/geoserver/wms'
     var map_extent = [94.9723, -11.0097, 141.012, 6.07724]
 } catch (error) {
     var base_url = ''
