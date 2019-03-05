@@ -25,6 +25,8 @@ export const fetchSettings = () => {
           phone: json.phone,
           fax: json.fax
         };
+        const pageTitle = `Geoportal ${json.organization}`;
+        document.title = pageTitle;
         setDataSettings(storedData);
       });
   }
