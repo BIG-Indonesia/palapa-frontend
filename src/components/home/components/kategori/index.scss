@@ -1,0 +1,122 @@
+.kategori {
+  padding: 60px 0 24px;
+  border-top: 2px solid #fff;
+  color: #fff;
+  background: #4E77A7;
+
+  &__loading {
+    padding-bottom: 70px;
+    width: 1px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__header {
+    position: absolute;
+    transform-origin: top left;
+    transform: rotate(90deg) translate(0, 40px);
+    font-size: 24px;
+    font-weight: normal;
+    &__line {
+      float: left;
+      width: 40px;
+      height: 1px;
+      margin: 18px 15px 0px -15px;
+      background: #fff;
+    }
+  }
+  &__item-list {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+  &__item-wrapper {
+    display: inline-block;
+    text-align: center;
+    padding: 0 36px 36px;
+    width: 192px;
+    vertical-align: top;
+  }
+  &__item {
+    text-decoration: none;
+    color: #4A4A4A;
+    &__logo {
+      display: block;
+      margin: 0 auto;
+      height: 120px;
+      width: 120px;
+      border: 2px solid #fff;
+      border-radius: 60px;
+      text-align: center;
+      overflow: hidden;
+      background: #fff;
+    }
+    &__image {
+      display: inline-block;
+      max-width: 100%;
+      max-height: 100%;
+
+    }
+    &:hover &__logo {
+      box-shadow: 0 0 5px #000;
+      border: 1px solid #fff;
+    }
+    &__label {
+      display: block;
+      padding-top: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+.layout-small {
+  .kategori {
+    padding: 20px 10px;
+    text-align: center;
+
+    &__header {
+      position: relative;
+      margin: 0 10px 20px 10px;
+      font-size: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #999;
+      transform: rotate(0) translate(0,0);
+    }
+    &__header__line {
+      display: none;
+    }
+    &__item-wrapper {
+      padding: 5px;
+      width: 100px;
+      height: 140px;
+      overflow: hidden;
+      display: inline-block;
+      float: none;
+    }
+    &__item__logo {
+      width: 80px;
+      height: 80px;
+    }
+    &__item__label {
+      font-size: 12px;
+    }
+  }
+}
+.layout-medium {
+  .kategori {
+    padding-top: 20px;
+    &__header {
+      position: relative;
+      margin: 0 20px 20px 20px;
+      font-size: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #999;
+      transform: rotate(0) translate(0,0);
+    }
+    &__header__line {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,259 @@
+.home {
+  position: relative;
+  
+  .banner {
+    position: relative;
+    height: 478px;
+    width: 1280px;
+    overflow: hidden;
+    background: #ccc;
+    &__overlay {
+      position: absolute;
+      height: 478px;
+      width: 1280px;
+      left: 0;
+      top: 0;
+      background: rgba(0,0,0,0.5);
+    }
+  }
+
+  &__search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &__intro {
+      width: 730px;
+      margin: 90px auto 0;
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+  }
+}
+
+.search {
+  position: relative;
+  z-index: 9;
+  width: 1200px;
+  margin: 60px auto 0;
+  padding: 20px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: rgba(210, 210, 210, 0.3);
+  &__advanced-link {
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding-top: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #4A4A4A;
+    font-size: 24px;
+    text-align: center;
+    background: #E4E4E4;
+  }
+  &__advanced-link:hover {
+    background: #ccc;
+  }
+  &-active {
+    height: 765px;
+    background-color: rgba(210, 210, 210, 0.7);
+  }
+  &-active &__advanced-link {
+    color: #fff;
+    background: #4B4B4B;
+  }
+  &-active &__advanced-link:hover {
+    background: #333;
+  }
+  &__input {
+    float: right;
+    height: 60px;
+    width: 1030px;
+    font-size: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__select-wrapper {
+    float: right;
+    overflow: hidden;
+    position: relative;
+    z-index: 1001;
+    height: 60px;
+    width: 0;
+    background: #E4E4E4;
+  }
+  &-active &__input{
+    width: 670px;
+  }
+  &-active &__select-wrapper{
+    overflow: visible;
+    width: 360px;
+  }
+  &__select-kategori {
+    float: left;
+    width: 50%;
+  }
+  &__select-walidata {
+    float: left;
+    width: 50%;
+  }
+  &__submit {
+    float: right;
+    width: 60px;
+    height: 60px;
+    padding-top: 15px;
+    border-radius: 0 5px 5px 0;
+    text-decoration: none;
+    color: #4A4A4A;
+    font-size: 24px;
+    text-align: center;
+    background: #E4E4E4;
+    border-left: 1px solid #aaa;
+  }
+  &__submit:hover {
+    background: #ccc;
+  }
+  &__map-wrapper {
+    position: relative;
+    margin-top: 75px;
+    height: 650px;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    border: 1px solid #fff;
+  }
+}
+
+.layout-small {
+  .home {
+    .banner {
+      height: 380px;
+    }
+    &__search__intro {
+      width: auto;
+      margin: 40px 20px;
+      font-size: 18px;
+    }
+  }
+  .search {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 25px 20px 20px;
+    height: auto;
+    &__input-wrapper {
+      padding: 0 40px 0 45px;
+      display: block;
+    }
+    &__input {
+      float: none;
+      width: 100%;
+      font-size: 18px;
+      height: 40px;
+    }
+    &__advanced-link {
+      height: 40px;
+      width: 40px;
+      margin: 0;
+      float: left;
+      font-size: 18px;
+      padding-top: 10px;
+    }
+    &__submit-wrapper {
+      float: right;
+    }
+    &__submit {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      margin: 0;
+      padding-top: 10px;
+      span {
+      }
+    }
+    &__select-wrapper {
+      height: 40px;
+      margin-top: 5px;
+      background: none;
+      font-size: 14px;
+    }
+    &-active .search__select-wrapper {
+      width: 100%;
+    }
+    &__map-wrapper {
+      margin: 0;
+    }
+  }
+}
+
+.layout-medium {
+  .home {
+    .banner {
+      height: 400px;
+    }
+    &__search__intro {
+      width: auto;
+      margin: 40px 60px;
+      font-size: 28px;
+    }
+  }
+  .search {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 25px 20px 20px;
+    height: auto;
+    &__input-wrapper {
+      padding: 0 60px 0 65px;
+      display: block;
+    }
+    &__input {
+      float: none;
+      width: 100%;
+      font-size: 22px;
+      height: 60px;
+    }
+    &__advanced-link {
+      height: 60px;
+      width: 60px;
+      margin: 0;
+      float: left;
+      font-size: 32px;
+      padding-top: 10px;
+    }
+    &__submit-wrapper {
+      float: right;
+    }
+    &__submit {
+      width: 60px;
+      height: 60px;
+      font-size: 32px;
+      margin: 0;
+      padding-top: 10px;
+      span {
+      }
+    }
+    &__select-wrapper {
+      height: 60px;
+      margin-top: 5px;
+      background: none;
+      font-size: 18px;
+    }
+    &-active .search__select-wrapper {
+      width: 100%;
+    }
+    &__map-wrapper {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.footer {
+  padding: 50px 0;
+  background: #000;
+  color: #ffffff;
+  font-size: 14px;
+
+  & .container {
+    overflow: hidden;
+  }
+  &__tentang {
+    float: right;
+    width: 560px;
+  }
+  &__kontak {
+    float: right;
+    width: 265px;
+    margin: 0 35px;
+  }
+  &__didukung {
+    float: right;
+    width: 265px;
+  }
+  &__header {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+  }
+  &__logo {
+    width: 100%;
+    overflow: hidden;
+    &__item {
+      float: left;
+      padding: 0 20px 0 0;
+    }
+    img {
+      max-width: 75px;
+      max-height: 75px;
+    }
+  }
+}
+
+.layout-small,
+.layout-medium {
+  .footer {
+    padding: 0 0 30px;
+
+    &__tentang {
+      float: none;
+      width: auto;
+      padding: 0 20px;
+    }
+    &__kontak {
+      float: none;
+      width: auto;
+      padding: 0 20px;
+      margin: 0;
+    }
+    &__didukung {
+      float: none;
+      width: auto;
+      padding: 0 20px;
+    }
+    &__header {
+      font-size: 20px;
+      margin: 30px 0 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #aaa;
+    }
+    p {
+      margin: 0 0 10px;
+    }
+  }
+}

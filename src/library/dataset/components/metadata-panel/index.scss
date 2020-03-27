@@ -1,0 +1,29 @@
+.metadata-panel {
+  &__title {
+    margin: 0;
+    padding: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    color: #999;
+  }
+  &__content {
+    padding-bottom: 20px;
+  }
+  &__item {
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 3px 0;
+    border-bottom: 1px solid #eee;
+  }
+  &__item-title {
+    float: left;
+    width: 230px;
+    font-weight: bold;
+  }
+  &__item-value {
+    float: left;
+  }
+}

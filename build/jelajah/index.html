@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/header.css">
+
+    <link type="text/css" rel="stylesheet" href="css/material-icons.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <script src="js/pace.min.js">
+        pace.start()
+    </script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!-- Content -->
+    <div class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="/">
+            <img src="" alt="">
+          </a>
+          <h1><a href="/"></a></h1>
+          <div class="header__nav-handle">
+            <span class="icon-list"></span>
+          </div>
+        </div>
+        <div class="header__nav">
+          <a href="/">Home</a>
+          <a class="active" href="/jelajah/">Jelajah</a>
+          <a href="/pencarian/">Pencarian</a>
+          <a href="/gspalapa/">Login</a>
+        </div>
+      </div>
+    </div>
+    <div id="jelajah">
+        <div id="jelajah_map"></div>
+        <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+            <div id="popup-content"></div>
+        </div>
+    </div>
+
+    <div id="print_modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Ekspor PDF / PNG</h4>
+            <p>Judul Peta : <input type="text" id="judul_peta"></p>
+            <div id="print_modal_content">
+                <div id="judul_peta_item"></div>
+                <table>
+                    <tr>
+                        <td id="peta_content"></td>
+                        <td id="peta_legend"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a id="e_pdf" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Ekspor PDF</a>
+            <a id="e_png" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Ekspor PNG</a>
+        </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <link type="text/css" rel="stylesheet" href="vendors/uploadfile/uploadfile.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="vendors/uploadfile/jquery.uploadfile.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-sortable.js"></script> -->
+    <script type="text/javascript" src="js/Sortable.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Openlayers -->
+    <link type="text/css" rel="stylesheet" href="css/ol.css">
+    <script type="text/javascript" src="vendors/ol/ol.js"></script>
+    <script type="text/javascript" src="vendors/ol/ol3-popup.js"></script>
+    <!-- Others -->
+    <script type="text/javascript" src="vendors/proj4js/proj4.js"></script>
+    <script type="text/javascript" src="vendors/shp2geojson/jszip.js"></script>
+    <script type="text/javascript" src="vendors/shp2geojson/jszip-utils.js"></script>
+    <script type="text/javascript" src="vendors/shp2geojson/preprocess.js"></script>
+    <script type="text/javascript" src="vendors/shp2geojson/preview.js"></script>
+    <script type="text/javascript" src="vendors/csv2geojson/csv2geojson.js"></script>
+    <script type="text/javascript" src="js/wms-capabilities.js"></script>
+    <script type="text/javascript" src="js/dropzone.js"></script>
+    <script type="text/javascript" src="js/vecloader.js"></script>
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <script type="text/javascript" src="js/jspdf.min.js"></script>
+    <!-- Jelajah2 css -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/jelajah2.css"> -->
+    <!-- Jelajah2 -->
+    <!-- <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/jelajah2.js"></script> -->
+    <!-- Jelajah3 css -->
+    <link type="text/css" rel="stylesheet" href="css/jelajah3.css">
+    <!-- Jelajah3 -->
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/jelajah3.js"></script>
+    
+</body>
+
+</html>
